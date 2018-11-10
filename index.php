@@ -16,11 +16,7 @@ file_put_contents("chatur.json", fopen("https://chaturbate.com/statsapi/?usernam
 var myObj = [];
 
 
-fetch('http://bko.gearhostpreview.com/chatur.json')
-  .then(response => response.text())
-  .then((data) => {
-    myObj = JSON.parse(data)
-  });
+myObj = $.get('http://bko.gearhostpreview.com/chatur.json',function(data){JSON.parse(data)});
 document.getElementById(‘text’).innerHTML = myObj.username
 </script>
     <title>Hello, world!</title>
