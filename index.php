@@ -14,7 +14,7 @@ file_put_contents("chatur.json", fopen("https://chaturbate.com/statsapi/?usernam
 ?>
 
 <script>
-var myObj = JSON.parse("chatur.json”);
+var myObj = JSON.parse("chatur.json");
 document.getElementById('text').innerHTML = myObj.username;
 </script>
     <title>Hello, world!</title>
