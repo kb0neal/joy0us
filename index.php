@@ -13,6 +13,10 @@
 file_put_contents("chatur.json", fopen("https://chaturbate.com/statsapi/?username=kc0untry777&token=KoPJJrv7kQu0mTq4xJnBLO02","r"));
 ?>
 
+<script>
+var myObj = JSON.parse("chatur.json”);
+document.getElementById('text').innerHTML = myObj.username;
+</script>
     <title>Hello, world!</title>
   </head>
   <body>
@@ -21,13 +25,7 @@ file_put_contents("chatur.json", fopen("https://chaturbate.com/statsapi/?usernam
 	</nav>
 
     <h1 id='usrname'>Hello, world!</h1>
-    <script>
-const obj;
-$.getJSON("chatur.json", function(json) {
-    obj = json;
-});
-document.write(obj + obj.username)
-</script>
+    <div id='text' class='container-fluid'></div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
